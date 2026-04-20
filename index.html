@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJET HEIST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Principal -->
+    <div id="main-menu">
+        <div class="menu-content">
+            <h1 class="game-title">PROJET HEIST</h1>
+            <p class="game-subtitle">RÉALITÉ PIXELISÉE</p>
+            <div class="menu-list">
+                <button class="menu-btn" id="btn-start">▶ JOUER : L'INTRODUCTION (ACTE I)</button>
+                <button class="menu-btn disabled" disabled>▶ ACTE II (Verrouillé)</button>
+                <button class="menu-btn disabled" disabled>▶ OPTIONS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Le Jeu -->
+    <div id="game-container" class="hidden">
+        <div id="scene-background"></div>
+        
+        <!-- Mode Investigation / Point & Click -->
+        <div id="investigation-layer" class="hidden"></div>
+
+        <!-- Overlay pour afficher un indice en gros plan -->
+        <div id="clue-overlay" class="hidden">
+            <div class="clue-content">
+                <button id="btn-close-clue">✖ FERMER</button>
+                <img id="clue-image" src="" alt="Indice">
+            </div>
+        </div>
+
+        <!-- Interface des choix finaux (ex: Énigme 1) -->
+        <div id="final-choices-container" class="hidden">
+            <h2>Combien de GTA$ récupérez-vous réellement ?</h2>
+            <div id="answers-grid"></div>
+        </div>
+
+        <div id="dialogue-container">
+            <!-- Portrait du personnage -->
+            <div id="character-sprite" class="hidden"></div>
+            
+            <!-- Boîte de dialogue style 'Visual Novel' / GTA -->
+            <div id="dialogue-box">
+                <div id="speaker-name"></div>
+                <div id="dialogue-text"></div>
+            </div>
+        </div>
+        
+        <div id="choices-container" class="hidden"></div>
+    </div>
+
+    <script src="js/story.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
